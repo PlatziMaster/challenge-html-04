@@ -1,7 +1,7 @@
 let WIDTH = window.innerWidth,
   HEIGHT = window.innerHeight,
   MAX_PARTICLES = 100,
-  DRAW_INTERVAL = 60,
+  DRAW_INTERVAL = 5,
   container = document.querySelector('.App'),
   canvas = document.querySelector('#universe'),
   context = canvas.getContext('2d'),
