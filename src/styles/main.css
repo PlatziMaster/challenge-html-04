@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,12 +7,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   min-height: 100%;
 }
 
 .App {
-  background: url("https://arepa.s3.amazonaws.com/space2.jpg") center center no-repeat;
+  background: url("https://arepa.s3.amazonaws.com/space2.jpg") center center
+    no-repeat;
   background-size: cover;
   position: fixed;
   right: 0;
@@ -27,12 +28,16 @@ body {
   top: 0;
   color: #f1f1f1;
   width: 100%;
-  background-image: linear-gradient(to bottom right, rgba(0,47,75,.4), rgba(0,0,0,.4));
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 47, 75, 0.3),
+    rgba(0, 0, 0, 0.2)
+  );
 }
 
 .Hero-container {
   display: grid;
-  grid-template-columns: minmax(auto,1280px);
+  grid-template-columns: minmax(auto, 1280px);
   justify-content: center;
   align-items: center;
 }
@@ -67,7 +72,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8em 0 0 0;
 }
 
 .Hero-title {
@@ -75,13 +79,15 @@ body {
 }
 
 .Hero-title h1 {
+  animation: float 10s ease-in-out infinite;
   font-size: 400px;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255, 255, 255, 0.2);
   margin: 0;
   padding: 0;
 }
 
 .Hero-title h2 {
+  animation: float 10s ease-in-out infinite;
   font-size: 45px;
   margin: -130px 0 0 0;
 }
@@ -103,13 +109,13 @@ body {
   font-size: 15px;
   border-radius: 5px;
   letter-spacing: 1.5px;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.3);
-  transition: .5s
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
 }
 
 .Hero-title .btn:hover {
-  background-color: rgba(0,47,75,.2);
-  color: rgba(255,255,255,0.8)
+  background-color: rgba(0, 47, 75, 0.2);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .Hero-title a {
@@ -125,18 +131,21 @@ body {
 .Hero-image img {
   margin: 4em 0 0 0;
   transform: translateY(0px);
-  animation: float 5s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
 }
 
 @keyframes float {
   0% {
     transform: translateY(0px);
+    transform: scale(0.8);
   }
   50% {
     transform: translateY(-40px);
+    transform: scale(1);
   }
   100% {
     transform: translateY(0px);
+    transform: scale(0.8);
   }
 }
 
@@ -146,5 +155,4 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: 1;
 }
